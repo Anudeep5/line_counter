@@ -1,0 +1,45 @@
+.leftPlane {
+  float: left;
+  width: 50%;
+  margin-top: 5%;
+}
+.leftPanel {
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+}
+.rightPlane {
+  float: left;
+  text-align: left !important;
+  width: 50%;
+  margin-top: 5%;
+}
+.rightPanel{
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.minuteBox {
+  width: 10%;
+  margin: 2%;
+  font-size: large;
+}
+.secondBox {
+  width: 10%;
+  margin: 2%;
+  font-size: large;
+}
+.add {
+  margin: 2%;
+  font-size: large;
+}
+.footer{
+    display: none;
+    position: absolute;
+    top: 95%;
+}
