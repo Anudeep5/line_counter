@@ -89,7 +89,7 @@ class Count extends React.Component {
               {parseInt(((minute_1 * 60 + second_1) / 60) % 60)} :{" "}
               {(minute_1 * 60 + second_1) % 60}
             </h2>
-            <h2>Total Lines - {((minute_1 * 60 + second_1) / 60) * 8}</h2>
+            <h2>Total Lines - {Number(((minute_1 * 60 + second_1) / 60) * 8).toFixed(2)}</h2>
           </div>
         </div>
         <div className="footer">By Anudeep Reddy Raavi</div>
