@@ -4,7 +4,7 @@ import "./Count.css";
 class Count extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { minute_1: 0, minute_2: 0, second_1: 0, second_2: 0 };
+    this.state = { minute_1: 0, minute_2: "", second_1: 0, second_2: "" };
     this.minuteInput = React.createRef();
   }
 
@@ -37,10 +37,13 @@ class Count extends React.Component {
       minute_1: parseInt(this.state.minute_1) + parseInt(this.state.minute_2),
       second_1: parseInt(this.state.second_1) + parseInt(this.state.second_2),
     });
-    console.log("minute_1-", this.state.minute_1);
-    console.log("minute_2-", this.state.minute_2);
-    console.log("second_1-", this.state.second_1);
-    console.log("second_2-", this.state.second_2);
+    console.log("-----");
+    console.log("Minute - ", this.state.minute_2);
+    console.log("Second - ", this.state.second_2);
+  };
+
+  Refresh = () => {
+    window.location.reload(false);
   };
 
   componentDidMount() {
@@ -76,6 +79,9 @@ class Count extends React.Component {
               <button className="add" type="submit" onClick={this.Add}>
                 Add
               </button>
+              <button className="reset" onClick={this.Refresh}>
+                Reset
+              </button>
             </div>
           </div>
         </div>
@@ -89,7 +95,10 @@ class Count extends React.Component {
               {parseInt(((minute_1 * 60 + second_1) / 60) % 60)} :{" "}
               {(minute_1 * 60 + second_1) % 60}
             </h2>
-            <h2>Total Lines - {Number(((minute_1 * 60 + second_1) / 60) * 8).toFixed(2)}</h2>
+            <h2>
+              Total Lines -{" "}
+              {Number(((minute_1 * 60 + second_1) / 60) * 8).toFixed(2)}
+            </h2>
           </div>
         </div>
         <div className="footer">By Anudeep Reddy Raavi</div>
