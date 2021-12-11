@@ -48,6 +48,7 @@ class Count extends React.Component {
 
   componentDidMount() {
     this.minuteInput.current.focus();
+    document.title = "Line Counter"
   }
 
   render() {
